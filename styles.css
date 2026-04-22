@@ -1,0 +1,49 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Colors and variables */
+:root {
+    --cream:       #F5EFE0;
+    --cream-dark:  #EDE3CC;
+    --espresso:    #2C1A0E;
+    --brown:       #6B3F1F;
+    --brown-light: #A0673A;
+    --gold:        #C49A3C;
+    --warm-white:  #FAF7F2;
+    --text-muted:  #8C7355;
+
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans:  'DM Sans', sans-serif;
+}
+
+/* Base */
+body {
+    font-family: var(--font-sans);
+    background-color: var(--warm-white);
+    color: var(--espresso);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
