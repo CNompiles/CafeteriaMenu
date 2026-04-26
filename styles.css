@@ -269,3 +269,7 @@ nav.scrolled {
     transform: scale(1.02);
     filter: brightness(1.05);
 }
+
+.gallery-grid img:nth-child(2) {
+    object-position: 50% 90%;
+}
