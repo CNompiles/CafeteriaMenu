@@ -234,3 +234,38 @@ nav.scrolled {
     color: var(--text-muted);
     max-width: 700px;
 }
+
+/* Gallery */
+#gallery {
+    padding: 6rem 4rem;
+    background: var(--warm-white);
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--espresso);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.4s, filter 0.4s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.05);
+}
