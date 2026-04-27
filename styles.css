@@ -28,6 +28,17 @@ body {
     font-family: var(--font-sans);
     background-color: var(--warm-white);
     color: var(--espresso);
+    overflow-x: hidden;
+}
+/* 
+html {
+    background-color: var(--espresso);
+} */
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    background-color: var(--espresso);
 }
 
 h1, h2, h3 {
@@ -111,8 +122,8 @@ nav.scrolled {
 
 #hero h1 {
     font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 400;
-    color: var(--cream);
+    font-weight: 550;
+    color: var(--espresso);
     line-height: 1.1;
     max-width: 700px;
     margin-bottom: 1.5rem;
@@ -120,13 +131,15 @@ nav.scrolled {
 
 #hero h1 em {
     font-style: italic;
+    font-weight: 600;
     color: var(--gold);
 }
 
 #hero p {
     font-size: 1.1rem;
-    color: var(--cream);
-    opacity: 0.7;
+    font-weight: 800;
+    color: var(--espresso);
+    /* opacity: 0.7; */
     margin-bottom: 2.5rem;
 }
 
@@ -350,4 +363,92 @@ footer{
     padding: 2rem;
     font-size: 0.85rem;
     opacity: 0.9;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    
+    section {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    /* Navbar */
+    nav {
+        padding: 1rem 1.5rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.5rem;
+    }
+
+    /* Hero */
+    #hero {
+        padding: 0 1.5rem;
+        /* min-width: 100svh; */
+        background-attachment: scroll;
+    }
+
+    #hero h1 {
+        font-size: clamp(1.8rem, 8vw, 3rem);
+        max-width: 100%;
+    }
+
+    #hero p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    /* About */
+    #about {
+        padding: 4rem 2rem;
+    }
+
+    /* Menu */
+    #menu {
+        padding: 4rem 1.5rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gallery */
+    #gallery {
+        padding: 4rem 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .gallery-grid img {
+        width: 100%;
+        height: 220px;
+    }
+
+    /* Contact */
+    .contact {
+        padding: 4rem 1.5rem;
+        width: 100%;
+    }
+    
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    #map {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #map iframe {
+        width: 100% !important;
+        height: 300px;
+    }
 }
