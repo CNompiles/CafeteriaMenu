@@ -24,21 +24,21 @@
 }
 
 /* Base */
-body {
-    font-family: var(--font-sans);
-    background-color: var(--warm-white);
-    color: var(--espresso);
-    overflow-x: hidden;
-}
-/* 
 html {
-    background-color: var(--espresso);
-} */
-
-html, body {
     overflow-x: hidden;
     width: 100%;
+    /* background-color: var(--espresso); */
+}
+body {
+    width: 100%;
+    padding-bottom: 0;
     background-color: var(--espresso);
+    background-image: url('images/backgroundbeans.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: var(--font-sans);
+    color: var(--espresso);
 }
 
 h1, h2, h3 {
@@ -84,7 +84,7 @@ nav.scrolled {
     font-family: var(--font-serif);
     font-size: 1.6rem;
     font-weight: 600;
-    color: var(--espresso);
+    color: var(--cream-dark);
 }
 
 .nav-links {
@@ -97,8 +97,8 @@ nav.scrolled {
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--espresso);
-    opacity: 0.7;
+    color: var(--cream-dark);
+    /* opacity: 0.7; */
     transition: opacity 0.2s;
 }
 
@@ -110,7 +110,7 @@ nav.scrolled {
 #hero {
     min-height: 100vh;
     background-color: var(--espresso);
-    background-image: url('images/logo.jpg');
+    background-image: url('images/backgroundshop.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -123,7 +123,7 @@ nav.scrolled {
 #hero h1 {
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 550;
-    color: var(--espresso);
+    color: var(--cream-dark);
     line-height: 1.1;
     max-width: 700px;
     margin-bottom: 1.5rem;
@@ -138,7 +138,7 @@ nav.scrolled {
 #hero p {
     font-size: 1.1rem;
     font-weight: 800;
-    color: var(--espresso);
+    color: var(--cream-dark);
     /* opacity: 0.7; */
     margin-bottom: 2.5rem;
 }
@@ -164,7 +164,9 @@ nav.scrolled {
 /* Menu */
 #menu {
     padding: 6rem 4rem;
-    background: var(--warm-white);
+    background: rgba(245, 239, 224, 0.85);
+    position: relative;
+    z-index: 2;
 }
 
 #menu h2 {
@@ -226,12 +228,20 @@ nav.scrolled {
 
 /* About */
 #about {
+    border-radius: 20px 20px 0 0;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
     padding: 6rem 4rem;
-    background: var(--cream);
+    background: rgba(245, 239, 224, 0.85);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    -ms-border-radius: 20px 20px 0 0;
+    -o-border-radius: 20px 20px 0 0;
 }
 
 #about h2 {
@@ -251,7 +261,9 @@ nav.scrolled {
 /* Gallery */
 #gallery {
     padding: 6rem 4rem;
-    background: var(--warm-white);
+    background: rgba(245, 239, 224, 0.85);
+    position: relative;
+    z-index: 2;
 }
 
 #gallery h2 {
@@ -290,7 +302,9 @@ nav.scrolled {
 /* Contact */
 #contact {
     padding: 6rem 4rem;
-    background: var(--cream);
+    background: rgba(245, 239, 224, 0.85);
+    position: relative;
+    z-index: 2;
 }
 
 #contact h2 {
@@ -362,17 +376,26 @@ footer{
     text-align: center;
     padding: 2rem;
     font-size: 0.85rem;
-    opacity: 0.9;
+    /*opacity: 0.9;
+    */margin: 0;
+    border-radius:0;
 }
+
+#about, #menu, #gallery, #contact{
+    margin: 1rem 2rem;
+    border-radius: 16px;
+    }
 
 /* Responsive - Mobile */
 @media (max-width: 768px) {
+    #about, #menu, #gallery, #contact{
+    margin: 1rem;
+}
     
-    section {
-        width: 100%;
-        overflow-x: hidden;
+    body {
+    background-attachment: scroll;
     }
-    
+
     /* Navbar */
     nav {
         padding: 1rem 1.5rem;
@@ -450,5 +473,10 @@ footer{
     #map iframe {
         width: 100% !important;
         height: 300px;
+    }
+
+    footer {
+        margin: 0;
+        border-radius: 0;
     }
 }
