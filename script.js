@@ -2,13 +2,12 @@ const navbar = document.getElementById('navbar');
 const sections = document.querySelectorAll('section');
 
 const sectionColor = {
-    'hero':    { bg: 'rgb(199, 152, 25)',               color: '#ffffff' },
-    'about':   { bg: 'rgb(199, 152, 25)', color: '#2C1A0E' },
-    'menu':    { bg: 'rgb(199, 152, 25)', color: '#2C1A0E' },
-    'gallery': { bg: 'rgb(199, 152, 25)', color: '#2C1A0E' },
-    'contact': { bg: 'rgb(199, 152, 25)', color: '#2C1A0E' },
+    'hero':    { bg: 'transparent',                color: '#EDE3CC' },
+    'about':   { bg: 'rgba(220, 161, 11, 0.75)',  color: '#2C1A0E' },
+    'menu':    { bg: 'rgba(220, 161, 11, 0.75)',  color: '#2C1A0E' },
+    'gallery': { bg: 'rgba(220, 161, 11, 0.75)',  color: '#2C1A0E' },
+    'contact': { bg: 'rgba(220, 161, 11, 0.75)',  color: '#2C1A0E' },
 };
-
 window.addEventListener('scroll', () => {
 
     // Scrolled class
